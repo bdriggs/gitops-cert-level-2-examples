@@ -7,7 +7,7 @@ metadata:
     codefresh.io/cert: grafana-job
   annotations:
     argocd.argoproj.io/sync-wave: "-10"
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: SyncFail
 spec:
   template:
     spec:
@@ -15,7 +15,7 @@ spec:
       - name: dummy-run
         image: alpine
         command:
-          - "sleep"
+          - "sleep123"
           - "10"
       restartPolicy: Never
   backoffLimit: 2    
