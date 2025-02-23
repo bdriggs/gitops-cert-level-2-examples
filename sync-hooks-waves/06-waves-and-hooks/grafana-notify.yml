@@ -2,12 +2,12 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   namespace: example06
-  generateName: resource-c
+  generateName: resource-skip-
   labels:
     codefresh.io/cert: grafana-job
   annotations:
     argocd.argoproj.io/sync-wave: "30"
-    argocd.argoproj.io/hook: SyncFail
+    argocd.argoproj.io/hook: Skip
 spec:
   template:
     spec:
