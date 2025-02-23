@@ -2,12 +2,12 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   namespace: example06
-  generateName: enable-alerts-
+  generateName: resource-b
   labels:
     codefresh.io/cert: enable-job
   annotations:
-    argocd.argoproj.io/sync-wave: "30"
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "20"
+    argocd.argoproj.io/hook: Sync
 spec:
   template:
     spec:
